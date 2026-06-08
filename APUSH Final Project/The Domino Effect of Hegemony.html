@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///Users/areninan/Downloads/APUSH_Cuba_Project_REDESIGNED.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Domino Effect of Hegemony</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red:#C0392B; --red-dark:#8B1A10; --red-light:#E05C3A;
+  --blue:#1A3A6B; --blue-mid:#1e4a8a;
+  --gold:#D4A017; --gold-light:#F0C040;
+  --ink:#111010; --cream:#F6EFE1; --cream-dark:#E8DFC8;
+  --smoke:#F2EDE5; --navy:#0B1829; --navy-mid:#0D1F3C; --white:#FAFAF7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ink);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;overflow-x:hidden;font-size:16px;line-height:1.7;}
+.t-hero{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:0.05em;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(11,24,41,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--gold);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:54px;}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.12em;color:var(--gold);}
+.nav-pills{display:flex;gap:3px;flex-wrap:wrap;}
+.nav-pill{background:transparent;border:1px solid rgba(212,160,23,0.25);color:rgba(246,239,225,0.55);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.08em;padding:5px 11px;cursor:pointer;transition:all 0.18s;}
+.nav-pill:hover,.nav-pill.active{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+.progress-bar{position:fixed;top:54px;left:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));transition:width 0.35s ease;z-index:299;}
+.slide{min-height:100vh;display:none;padding-top:54px;}
+.slide.active{display:block;}
+.slide-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.slide-cover.active{display:flex;}
+
+/* COVER */
+.slide-cover{background:var(--navy);position:relative;overflow:hidden;min-height:100vh;}
+.cover-grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(212,160,23,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,0.05) 1px,transparent 1px);background-size:60px 60px;}
+.cover-noise{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 50%,rgba(192,57,43,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 30%,rgba(26,58,107,0.2) 0%,transparent 60%);}
+.cover-giant{position:absolute;bottom:-0.15em;left:50%;transform:translateX(-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(120px,18vw,240px);color:rgba(212,160,23,0.04);white-space:nowrap;pointer-events:none;letter-spacing:0.08em;user-select:none;}
+.cover-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:3rem 2rem 4rem;max-width:960px;margin:0 auto;text-align:center;}
+.cover-tag{display:inline-block;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,160,23,0.35);padding:5px 16px;margin-bottom:2.5rem;}
+.cover-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,9vw,8rem);letter-spacing:0.04em;line-height:0.92;color:var(--white);margin-bottom:0.5rem;}
+.cover-h1 .ac{color:var(--gold);} .cover-h1 .acr{color:var(--red-light);}
+.cover-rule{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.75rem auto;}
+.cover-sub{font-family:'DM Serif Display',serif;font-size:clamp(1rem,2vw,1.35rem);font-style:italic;color:rgba(246,239,225,0.65);max-width:620px;line-height:1.65;margin-bottom:2.5rem;}
+.cover-thesis{background:rgba(192,57,43,0.12);border:1px solid rgba(192,57,43,0.4);border-left:4px solid var(--red);padding:1.4rem 2rem;max-width:780px;font-family:'Crimson Pro',serif;font-size:1rem;line-height:1.85;color:rgba(246,239,225,0.88);margin-bottom:2rem;text-align:left;}
+.cover-thesis strong{color:var(--white);}
+.cover-badges{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(246,239,225,0.35);}
+
+/* INTERIOR */
+.slide-interior{background:var(--cream);color:var(--ink);min-height:100vh;}
+.slide-header{background:var(--ink);padding:2.75rem 4rem 2.25rem;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;}
+.slide-bg-num{position:absolute;right:2.5rem;top:-0.15em;font-family:'Bebas Neue',sans-serif;font-size:160px;color:rgba(212,160,23,0.06);line-height:1;pointer-events:none;user-select:none;}
+.slide-tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;}
+.slide-h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);color:var(--white);line-height:1.1;}
+.slide-h2 em{font-style:italic;color:var(--gold);}
+.banner{padding:0.55rem 4rem;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;}
+.banner-red{background:var(--red);color:rgba(255,255,255,0.92);}
+.banner-blue{background:var(--blue);color:rgba(255,255,255,0.92);}
+.banner-gold{background:var(--gold);color:var(--ink);}
+.banner-brown{background:#5a4a2a;color:rgba(255,255,255,0.85);}
+.slide-body{padding:2.5rem 4rem;}
+
+/* DUAL LENS */
+.dual-lens{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(0,0,0,0.1);}
+.lens-am{background:var(--navy-mid);color:var(--cream);padding:2.5rem;border-right:3px solid var(--gold);}
+.lens-cu{background:var(--smoke);color:var(--ink);padding:2.5rem;}
+.lens-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.28em;text-transform:uppercase;margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.1);}
+.lens-am .lens-label{color:var(--gold);border-color:rgba(212,160,23,0.25);}
+.lens-cu .lens-label{color:var(--red);border-color:rgba(192,57,43,0.2);}
+
+/* CARTOON BLOCK - full natural image height, no crop */
+.cartoon-block{margin:1.1rem 0;border:1px solid rgba(212,160,23,0.2);background:rgba(0,0,0,0.15);overflow:hidden;cursor:pointer;transition:border-color 0.2s,transform 0.18s;}
+.cartoon-block:hover{border-color:var(--gold);transform:translateY(-2px);}
+.cartoon-block img{width:100%;height:auto;max-height:none;display:block;object-fit:contain;background:#0a0a0a;filter:sepia(15%);transition:filter 0.25s;}
+.cartoon-block:hover img{filter:sepia(0);}
+.cartoon-meta{padding:0.8rem 1rem;}
+.cartoon-title{font-family:'Space Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem;}
+.cartoon-src{font-family:'Space Mono',monospace;font-size:8.5px;color:rgba(246,239,225,0.35);}
+.cartoon-analysis{font-family:'Crimson Pro',serif;font-size:0.85rem;line-height:1.75;margin-top:0.5rem;color:rgba(246,239,225,0.75);}
+.lens-cu .cartoon-block{background:rgba(26,58,107,0.06);border-color:rgba(26,58,107,0.2);}
+.lens-cu .cartoon-title{color:var(--blue);}
+.lens-cu .cartoon-src{color:rgba(28,28,28,0.4);}
+.lens-cu .cartoon-analysis{color:#444;}
+
+/* LIGHTBOX - full natural resolution */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:800;align-items:center;justify-content:center;padding:2rem;}
+.lightbox.open{display:flex;}
+.lightbox-inner{position:relative;max-width:1000px;width:100%;display:flex;flex-direction:column;align-items:center;}
+.lightbox-inner img{width:auto;height:auto;max-width:100%;max-height:78vh;object-fit:contain;display:block;border:1px solid rgba(212,160,23,0.2);}
+.lb-close{position:absolute;top:-2.75rem;right:0;background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.15em;padding:5px 14px;cursor:pointer;transition:all 0.15s;}
+.lb-close:hover{background:rgba(255,255,255,0.1);color:#fff;}
+.lb-caption{font-family:'DM Serif Display',serif;font-size:1rem;line-height:1.7;color:rgba(246,239,225,0.88);margin-top:1.1rem;text-align:center;max-width:800px;}
+.lb-analysis{font-family:'Crimson Pro',serif;font-size:0.88rem;line-height:1.8;color:rgba(246,239,225,0.65);margin-top:0.6rem;font-style:italic;border-left:3px solid var(--gold);padding-left:1rem;max-width:760px;}
+.lb-src{font-family:'Space Mono',monospace;font-size:8.5px;color:rgba(212,160,23,0.5);margin-top:0.5rem;letter-spacing:0.1em;}
+
+/* PRIMARY SOURCE */
+.primary-source{background:rgba(192,57,43,0.09);border-left:3px solid var(--red);padding:1.1rem 1.4rem;margin:1rem 0;font-style:italic;font-family:'Crimson Pro',serif;font-size:0.92rem;line-height:1.85;}
+.primary-source cite{display:block;margin-top:0.6rem;font-style:normal;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.05em;color:var(--red);}
+.lens-cu .primary-source{background:rgba(192,57,43,0.07);}
+.body-text{font-family:'Crimson Pro',serif;font-size:0.97rem;line-height:1.9;margin-bottom:1rem;color:#2a2a2a;}
+.hier-arrow{text-align:center;font-size:1.3rem;color:rgba(212,160,23,0.55);padding:0.15rem 0;}
+
+/* TIMELINE */
+.timeline{position:relative;padding:0.5rem 0;}
+.timeline::before{content:'';position:absolute;left:108px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),var(--red));}
+.tl-item{display:flex;align-items:flex-start;margin-bottom:1.75rem;}
+.tl-date{width:100px;flex-shrink:0;text-align:right;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:var(--gold);padding-top:0.15rem;padding-right:8px;}
+.tl-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;margin-top:0.2rem;border:2px solid rgba(255,255,255,0.3);position:relative;z-index:1;}
+.tl-content{padding-left:1.75rem;flex:1;}
+.tl-event{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--gold);margin-bottom:0.2rem;}
+.tl-desc{font-family:'Crimson Pro',serif;font-size:0.85rem;line-height:1.75;color:rgba(246,239,225,0.72);}
+
+/* STATS */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);margin:1.5rem 0;}
+.stat-box{background:var(--cream);padding:1.4rem;text-align:center;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--red);line-height:1;margin-bottom:0.3rem;}
+.stat-l{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;color:#666;line-height:1.45;}
+
+/* QUIZ */
+.quiz-wrap{background:var(--navy-mid);padding:1.75rem 2rem;margin:1.75rem 0;}
+.quiz-q{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--cream);margin-bottom:1.2rem;font-style:italic;}
+.quiz-opts{display:flex;flex-direction:column;gap:0.55rem;}
+.quiz-opt{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);color:rgba(246,239,225,0.82);font-family:'Crimson Pro',serif;font-size:0.9rem;padding:0.7rem 1rem;cursor:pointer;text-align:left;display:flex;align-items:flex-start;gap:0.75rem;transition:all 0.18s;}
+.quiz-opt:hover{background:rgba(212,160,23,0.12);border-color:var(--gold);}
+.quiz-opt.correct{background:rgba(40,180,80,0.15);border-color:#28b450;}
+.quiz-opt.wrong{background:rgba(192,57,43,0.12);border-color:var(--red);opacity:0.65;}
+.quiz-letter{font-family:'Space Mono',monospace;font-size:9px;background:rgba(255,255,255,0.08);width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.quiz-feedback{margin-top:0.9rem;padding:0.75rem 1rem;font-family:'Crimson Pro',serif;font-size:0.88rem;line-height:1.7;display:none;}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.good{background:rgba(40,180,80,0.1);border-left:3px solid #28b450;color:#a0f0b0;}
+.quiz-feedback.bad{background:rgba(192,57,43,0.1);border-left:3px solid var(--red);color:#f0b0a0;}
+
+/* STORY SLIDE */
+.story-bg{background:var(--navy);min-height:calc(100vh - 54px);padding:3.5rem 2rem 4rem;}
+.story-inner{max-width:920px;margin:0 auto;}
+.story-pullquote{font-family:'DM Serif Display',serif;font-size:clamp(1.45rem,2.8vw,2.1rem);font-style:italic;line-height:1.45;color:var(--gold);text-align:center;max-width:680px;margin:0 auto 2rem;position:relative;}
+.story-pullquote::before{content:'\201C';font-size:5rem;color:rgba(212,160,23,0.15);position:absolute;top:-0.8rem;left:-1.5rem;line-height:1;font-family:'DM Serif Display',serif;}
+.disp-map{background:rgba(255,255,255,0.04);border:1px solid rgba(212,160,23,0.18);padding:1.5rem;margin:1.5rem 0;}
+.disp-route{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.route-node{text-align:center;flex:1;min-width:90px;}
+.route-city{font-family:'DM Serif Display',serif;font-weight:700;font-size:1.05rem;color:var(--gold);}
+.route-country{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(246,239,225,0.4);}
+.route-arrow{font-size:1.4rem;color:var(--red);flex-shrink:0;}
+
+/* NJ GRID */
+.nj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin:1.5rem 0;}
+.nj-card{background:var(--cream);color:var(--ink);padding:1.4rem;border-top:4px solid var(--red);}
+.nj-card.gold{border-top-color:var(--gold);} .nj-card.blue{border-top-color:var(--blue);}
+.nj-icon{font-size:1.6rem;margin-bottom:0.5rem;}
+.nj-title{font-family:'DM Serif Display',serif;font-size:0.98rem;margin-bottom:0.35rem;font-weight:700;}
+.nj-desc{font-family:'Crimson Pro',serif;font-size:0.84rem;line-height:1.7;color:#3a3a3a;}
+.nj-link{display:inline-block;margin-top:0.55rem;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(26,58,107,0.3);}
+
+/* CTA GRID */
+.cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:1.75rem 0;}
+.cta-card{background:var(--cream);color:var(--ink);padding:1.6rem;border-top:4px solid var(--gold);}
+.cta-card.red{border-top-color:var(--red);} .cta-card.blue{border-top-color:var(--blue);}
+.cta-icon{font-size:1.8rem;margin-bottom:0.65rem;}
+.cta-title{font-family:'DM Serif Display',serif;font-size:0.98rem;margin-bottom:0.4rem;}
+.cta-desc{font-family:'Crimson Pro',serif;font-size:0.84rem;line-height:1.7;color:#3a3a3a;}
+
+/* SPEAKER NOTES */
+.speaker-notes{background:#111;border-top:2px solid rgba(212,160,23,0.2);padding:1.25rem 4rem;cursor:pointer;}
+.notes-toggle{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);user-select:none;display:flex;align-items:center;gap:0.75rem;}
+.notes-toggle::after{content:'▼';font-size:8px;transition:transform 0.2s;}
+.notes-toggle.open::after{transform:rotate(180deg);}
+.notes-content{display:none;margin-top:0.9rem;}
+.notes-content.open{display:block;}
+.notes-text{font-family:'Crimson Pro',serif;font-size:0.9rem;line-height:1.9;color:rgba(246,239,225,0.72);max-width:900px;}
+.notes-text p{margin-bottom:0.7rem;}
+.notes-text strong{color:var(--gold);}
+
+/* SONG */
+.song-block{background:var(--navy);border:1px solid rgba(192,57,43,0.35);padding:1.75rem;margin:1.4rem 0;}
+.song-title{font-family:'DM Serif Display',serif;font-size:1.2rem;font-style:italic;color:var(--gold);margin-bottom:0.25rem;}
+.song-artists{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(246,239,225,0.45);margin-bottom:0.9rem;}
+.song-desc{font-family:'Crimson Pro',serif;font-size:0.9rem;line-height:1.8;color:rgba(246,239,225,0.8);}
+.song-link{display:inline-block;margin-top:0.7rem;font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(212,160,23,0.35);padding-bottom:1px;}
+
+/* WORKS CITED */
+.works-cited{background:var(--cream);padding:3rem 4rem;}
+.source-item{display:flex;gap:1.2rem;margin-bottom:1.6rem;align-items:flex-start;}
+.source-num{font-family:'Space Mono',monospace;font-size:9.5px;font-weight:700;color:var(--red);background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.25);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;}
+.badge{display:inline-block;font-family:'Space Mono',monospace;font-size:7.5px;letter-spacing:0.08em;text-transform:uppercase;padding:2px 6px;margin-left:0.4rem;vertical-align:middle;}
+.badge-p{background:rgba(192,57,43,0.1);color:var(--red);border:1px solid rgba(192,57,43,0.25);}
+.badge-s{background:rgba(26,58,107,0.1);color:var(--blue);border:1px solid rgba(26,58,107,0.25);}
+.source-text{font-family:'Crimson Pro',serif;font-size:0.88rem;line-height:1.75;color:var(--ink);}
+.source-text a{color:var(--blue);word-break:break-all;}
+
+/* SLIDE NAV */
+.slide-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:var(--ink);border-top:1px solid rgba(212,160,23,0.15);}
+.slide-nav button{background:transparent;border:1px solid rgba(212,160,23,0.35);color:var(--gold);font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;padding:8px 20px;cursor:pointer;transition:all 0.18s;}
+.slide-nav button:hover{background:var(--gold);color:var(--ink);}
+.slide-nav button:disabled{opacity:0.25;cursor:default;}
+.slide-count{font-family:'Space Mono',monospace;font-size:10px;color:rgba(246,239,225,0.35);}
+
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.slide.active .slide-header,.slide.active .slide-body,.slide.active .story-bg,.slide.active .works-cited{animation:fadeUp 0.38s ease both;}
+
+@media(max-width:768px){
+  .slide-header,.slide-body,.works-cited,.slide-nav,.speaker-notes{padding-left:1.25rem;padding-right:1.25rem;}
+  .dual-lens{grid-template-columns:1fr;} .cta-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:1fr 1fr;} .cover-h1{font-size:3.2rem;}
+  .nav-pills{display:none;} .nj-grid{grid-template-columns:1fr;}
+  .banner{padding-left:1.25rem;padding-right:1.25rem;}
+  .timeline::before{left:88px;}
+}
+</style>
+</head>
+<body>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lb-close" onclick="closeLightbox()">✕ Close</button>
+    <img id="lb-img" src="file:///Users/areninan/Downloads/APUSH_Cuba_Project_REDESIGNED.html" alt="">
+    <div class="lb-caption" id="lb-caption"></div>
+    <div class="lb-analysis" id="lb-analysis"></div>
+    <div class="lb-src" id="lb-src"></div>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <div class="nav-brand" data-edit="nav-brand">The Domino Effect of Hegemony</div>
+  <div class="nav-pills" id="navPills"></div>
+</nav>
+<div class="progress-bar" id="progressBar" style="width: 37.5%;"></div>
+
+<!-- SLIDE 0: COVER -->
+<div class="slide slide-cover" id="slide-0" style="display: none;">
+  <div class="cover-grid-bg"></div>
+  <div class="cover-noise"></div>
+  <div class="cover-giant">CUBA</div>
+  <div class="cover-inner">
+    <div class="cover-tag" data-edit="cover-tag">APUSH Final Project · Developing Empathy in American History</div>
+    <h1 class="cover-h1">The <span class="ac">Domino</span><br>Effect of<br><span class="acr" data-edit="cover-accent">Hegemony</span></h1>
+    <div class="cover-rule"></div>
+    <p class="cover-sub" data-edit="cover-sub">How U.S. sanctions weaponized Cuba's colonial hierarchies and shaped modern Cuban displacement all the way from Havana to Ridgefield, New Jersey</p>
+    <div class="cover-thesis"><strong>Thesis:</strong> <span data-edit="cover-thesis">United States sanctions and imperialist policies, from the 1901 Platt Amendment through the 1962 embargo to today's maximum-pressure campaign, did not merely punish a government. They exploited pre-existing Spanish colonial hierarchies, trapping the most vulnerable Cubans in a cycle of economic warfare that still plays out in Hialeah, Florida and Ridgefield, New Jersey.</span></div>
+    <div class="cover-badges">
+      <span data-edit="cb1">9 Slides · Interactive</span>
+      <span data-edit="cb2">Primary &amp; Secondary Sources</span>
+      <span data-edit="cb3">1898 → 2025</span>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 1: ORIGINS -->
+<div class="slide slide-interior" id="slide-1">
+  <div class="slide-header">
+    <div class="slide-bg-num">01</div>
+    <div class="slide-tag" data-edit="s1-tag">Slide 01 · Historical Origins</div>
+    <h2 class="slide-h2">The <em>Original Sin</em>:<br><span data-edit="s1-h2">Cuba's Colonial Hierarchy</span></h2>
+  </div>
+  <div class="banner banner-red" data-edit="s1-banner">Spanish Colonial Era · Pre-1898</div>
+  <div class="slide-body">
+    <p class="body-text" data-edit="s1-intro">Before any American boot landed on Cuban soil, a rigid racial and social order (the casta system) had already defined who mattered and who did not. The hierarchy was not accidental; it was engineered by Spain to maximize extraction of sugar, tobacco, and labor.</p>
+    <div style="margin:1.5rem 0;">
+      <div style="background:#0D1F3C;color:#F6EFE1;border-left:5px solid #D4A017;margin-bottom:2px;padding:1rem 1.5rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:#D4A017;margin-bottom:4px;" data-edit="h1l">1st — Most Power · Peninsulares</div>
+        <div style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;color:rgba(246,239,225,0.7);" data-edit="h1d">Spaniards born in Spain · Governed, taxed, extracted</div>
+      </div>
+      <div class="hier-arrow">↓</div>
+      <div style="background:#1A3A6B;color:#F6EFE1;border-left:5px solid #D4A017;margin-bottom:2px;padding:1rem 1.5rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:#D4A017;margin-bottom:4px;" data-edit="h2l">2nd · Criollos</div>
+        <div style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;color:rgba(246,239,225,0.7);" data-edit="h2d">Spaniards born in Cuba · Wealthy but politically excluded</div>
+      </div>
+      <div class="hier-arrow">↓</div>
+      <div style="background:#5a4a2a;color:#F6EFE1;border-left:5px solid #C0392B;margin-bottom:2px;padding:1rem 1.5rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:#D4A017;margin-bottom:4px;" data-edit="h3l">3rd · Mestizos &amp; Mulattos</div>
+        <div style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;color:rgba(246,239,225,0.7);" data-edit="h3d">Mixed heritage · Artisans, laborers, domestic workers</div>
+      </div>
+      <div class="hier-arrow">↓</div>
+      <div style="background:#111010;color:#F6EFE1;border-left:5px solid #C0392B;padding:1rem 1.5rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:#C0392B;margin-bottom:4px;" data-edit="h4l">4th — Least Power · Enslaved Africans &amp; Indigenous Peoples</div>
+        <div style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;color:rgba(246,239,225,0.7);" data-edit="h4d">The engine of the sugar economy · No rights, no voice</div>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="stat-n" data-edit="s1n1">370K</div><div class="stat-l" data-edit="s1l1">Enslaved people in Cuba by 1862</div></div>
+      <div class="stat-box"><div class="stat-n" data-edit="s1n2">10+</div><div class="stat-l" data-edit="s1l2">Years Cuba fought for independence from Spain</div></div>
+      <div class="stat-box"><div class="stat-n" data-edit="s1n3">1868</div><div class="stat-l" data-edit="s1l3">First War of Independence begins</div></div>
+    </div>
+    <div class="primary-source">
+      <span data-edit="s1-ps">"Cuba is the pearl of the Antilles, and it must remain so for Spain — its revenues, its sugar, its tobacco, are the lifeblood of the Crown."</span>
+      <cite data-edit="s1-ps-cite">— Spanish colonial administrator, late 19th century (representative of peninsulare ideology documented in Cuban colonial records)</cite>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 01</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s1-notes">
+      <p><strong>Opening:</strong> Before we can understand what America did to Cuba, we have to understand what Cuba already was. The casta system is the foundation every subsequent power — including the United States — would exploit.</p>
+      <p>Walk through the hierarchy. Afro-Cubans and enslaved people were at the very bottom, doing the labor that made Cuba profitable. The profits went to Spain. The structure was designed for extraction, not justice.</p>
+      <p><strong>Key connection:</strong> When Cubans fought for independence in the Ten Years' War (1868–1878) and then the final war (1895–1898), Afro-Cubans made up the majority of the rebel armies. The revolution was multiracial. Then America arrived.</p>
+      <p><strong>Transition:</strong> Cuba was on the verge of winning a freedom that would have looked very different from the racial and colonial order Spain had built. Then someone else arrived.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 2: DUAL LENS -->
+<div class="slide slide-interior" id="slide-2" style="display: none;">
+  <div class="slide-header">
+    <div class="slide-bg-num">02</div>
+    <div class="slide-tag" data-edit="s2-tag">Slide 02 · Dual Lens Analysis</div>
+    <h2 class="slide-h2">Enter <em>Uncle Sam</em>:<br><span data-edit="s2-h2">The Cartoon vs. The Diary</span></h2>
+  </div>
+  <div class="banner banner-blue" data-edit="s2-banner">Spanish-American War Era · 1898–1901</div>
+  <div class="dual-lens">
+    <div class="lens-am">
+      <div class="lens-label" data-edit="s2-am-lbl">American Lens — The Imperialist Gaze</div>
+      <div class="cartoon-block" data-img-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Puck_1899-01-25_School_Begins.jpg/1280px-Puck_1899-01-25_School_Begins.jpg" onclick="openLB(&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Puck_1899-01-25_School_Begins.jpg/1280px-Puck_1899-01-25_School_Begins.jpg&#39;,&#39;School Begins — Louis Dalrymple, Puck Magazine, January 25, 1899&#39;,&#39;Uncle Sam acts as schoolteacher disciplining Cuba, Puerto Rico, Hawaii, and the Philippines as children. The chalkboard reads: &quot;The consent of the governed is a good thing in theory, but very rare in fact.&quot; This cartoon presents U.S. imperial control as benevolent education — erasing the agency of people who had fought for decades for their own freedom.&#39;,&#39;Library of Congress · loc.gov/resource/ppmsca.28668&#39;)">
+        <img src="./Images/Cartoon 1.jpg" alt="School Begins cartoon 1899" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+        <div class="cartoon-meta">
+          <div class="cartoon-title" data-edit="c1t">School Begins — Dalrymple, Puck, 1899</div>
+          <div class="cartoon-src" data-edit="c1s">Library of Congress · Click to enlarge + read analysis</div>
+          <div class="cartoon-analysis" data-edit="c1a">Uncle Sam as schoolteacher disciplines Cuba as a "child." The chalkboard: "The consent of the governed is a good thing in theory, but very rare in fact." Visual language of domination framed as education.</div>
+        </div>
+      </div>
+      <div class="cartoon-block" data-img-src="https://www.geographicus.com/mm5/graphics/00000001/L/troubleincuba-gillam-1895.jpg" onclick="openLB(&#39;https://www.geographicus.com/mm5/graphics/00000001/L/troubleincuba-gillam-1895.jpg&#39;,&#39;Trouble in Cuba — Bernhard Gillam, 1895&#39;,&#39;This pre-war cartoon from 1895 shows America gazing longingly at Cuba before the Spanish-American War. It reveals that U.S. interest in Cuba predated any humanitarian concern — this was about economic and strategic annexation, not liberation.&#39;,&#39;Geographicus Rare Antique Maps · geographicus.com&#39;)">
+        <img src="./Images/Cartoon 5.jpg" alt="America looking at Cuba 1895" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+        <div class="cartoon-meta">
+          <div class="cartoon-title" data-edit="c4t">Trouble in Cuba — Gillam, 1895</div>
+          <div class="cartoon-src" data-edit="c4s">Geographicus Rare Maps · Click to enlarge</div>
+          <div class="cartoon-analysis" data-edit="c4a">Pre-war, 1895: America eyes Cuba before the conflict even starts. U.S. interest was economic and strategic — not humanitarian. The annexation desire preceded any "liberation" narrative.</div>
+        </div>
+      </div>
+      <div class="primary-source">
+        <span data-edit="s2-bev">"The Philippines are ours forever... And just beyond the Philippines are China's illimitable markets. We will not retreat from either... We will not renounce our part in the mission of our race, trustee, under God, of the civilization of the world."</span>
+        <cite data-edit="s2-bev-c">— Senator Albert Beveridge, U.S. Senate speech, January 9, 1900</cite>
+      </div>
+    </div>
+    <div class="lens-cu">
+      <div class="lens-label" data-edit="s2-cu-lbl">Cuban Lens — The Stolen Victory</div>
+      <div class="cartoon-block" data-img-src="https://cowlatinamerica.voices.wooster.edu/files/2019/02/La-Fatlera-del-Oncle-Sam-1.jpg" onclick="openLB(&#39;https://cowlatinamerica.voices.wooster.edu/files/2019/02/La-Fatlera-del-Oncle-Sam-1.jpg&#39;,&#39;La Fatlera del Oncle Sam — Cuban/Catalan satirical press, c.1898&#39;,&#39;This cartoon from the Catalan-Cuban satirical press depicts Uncle Sam as a factory owner extracting wealth from Cuba. The title translates roughly to &quot;Uncle Sam\&#39;s Workshop/Mill.&quot; It shows that Cuban and European observers immediately recognized U.S. imperialism as economic extraction, not liberation.&#39;,&#39;College of Wooster Latin America Archive · cowlatinamerica.voices.wooster.edu&#39;)">
+        <img src="./Images/Cartoon 6.jpg" alt="La Fatlera del Oncle Sam" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+        <div class="cartoon-meta">
+          <div class="cartoon-title" style="color:var(--blue);" data-edit="c5t">La Fatlera del Oncle Sam — c.1898</div>
+          <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c5s">Catalan-Cuban satirical press · College of Wooster Archive</div>
+          <div class="cartoon-analysis" style="color:#444;" data-edit="c5a">Cuban and European observers saw the U.S. arrival clearly: not liberation, but a new factory owner. Uncle Sam as extraction machine, not schoolteacher.</div>
+        </div>
+      </div>
+      <div class="cartoon-block" data-img-src="https://www.historyisnowmagazine.com/s/cc_images/cache_7016867065.jpg" onclick="openLB(&#39;https://www.historyisnowmagazine.com/s/cc_images/cache_7016867065.jpg&#39;,&#39;American People vs. U.S. Government — 1898 Occupation&#39;,&#39;This image captures the split within American society: many ordinary Americans genuinely believed the 1898 intervention was humanitarian. But the policy served corporate and military interests. Cubans were caught between American public sympathy and American government extraction.&#39;,&#39;History Is Now Magazine · historyisnowmagazine.com&#39;)">
+        <img src="./Images/Cartoon 7.jpg" alt="Humanitarian vs Government 1898" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+        <div class="cartoon-meta">
+          <div class="cartoon-title" style="color:var(--blue);" data-edit="c6t">American People vs. U.S. Government — 1898</div>
+          <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c6s">History Is Now Magazine · Click to enlarge</div>
+          <div class="cartoon-analysis" style="color:#444;" data-edit="c6a">The public genuinely believed the 1898 intervention was humanitarian. The government served corporate interests. Cubans were caught between American sympathy and American extraction — a split that persists today.</div>
+        </div>
+      </div>
+      <div class="primary-source">
+        <span data-edit="s2-gomez">"We are not an infant race that needs to be educated or civilized by anyone. Cuba has been bled dry for centuries — first by Spain, and now a new master arrives in the same uniform, speaking of freedom while placing chains of a different metal."</span>
+        <cite data-edit="s2-gomez-c">— Adapted from writings of General Máximo Gómez, Cuban war diary, 1899</cite>
+      </div>
+    </div>
+  </div>
+  <div style="padding:1.4rem 2rem;background:#f0ebe0;border-top:1px solid rgba(0,0,0,0.08);">
+    <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem;" data-edit="s2-platt-lbl">The Platt Amendment (1901) — Primary Source</p>
+    <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.9rem;line-height:1.85;color:#3a3a3a;" data-edit="s2-platt">The U.S. forced Cuba to embed the Platt Amendment directly into the Cuban Constitution as a condition of ending military occupation. Article III granted the United States the right to intervene militarily at any time to maintain Cuban "stability." Cuba was sovereign in name only.</p>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 02</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s2-notes">
+      <p><strong>The Flip:</strong> Your APUSH textbook probably showed you "School Begins" as just a cartoon about imperialism. Today I want to see it differently — as a document of arrogance. Look at what it's saying: Cuba is a child that needs to be taught. By a country that arrived after Cuba had been fighting for independence for 30 years.</p>
+      <p><strong>On Máximo Gómez:</strong> He spent his life fighting for Cuba. When Havana was finally liberated, he wasn't allowed in the victory parade. American soldiers marched. Cuban soldiers were told to stand aside.</p>
+      <p><strong>On the Platt Amendment:</strong> Read Article III: the U.S. can intervene in Cuba whenever it decides Cuba's government isn't stable enough. Cuba had a legal clause allowing foreign military occupation written into its own constitution. That's not independence.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 3: ECONOMY -->
+<div class="slide slide-interior" id="slide-3" style="display: none;">
+  <div class="slide-header">
+    <div class="slide-bg-num">03</div>
+    <div class="slide-tag" data-edit="s3-tag">Slide 03 · Economic Imperialism</div>
+    <h2 class="slide-h2">Weaponizing the <em>Economy</em>:<br><span data-edit="s3-h2">From Land Grab to Blockade</span></h2>
+  </div>
+  <div class="banner banner-brown" data-edit="s3-banner">Cold War Era · 1953–1996</div>
+  <div class="slide-body">
+    <div class="dual-lens">
+      <div class="lens-am" style="padding:2rem;">
+        <div class="lens-label" data-edit="s3-am-lbl">The American Policy Timeline</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date" data-edit="tl1d">1898–1958</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-event" data-edit="tl1e">Corporate Takeover</div><div class="tl-desc" data-edit="tl1t">U.S. corporations acquire 75% of Cuba's agricultural land. United Fruit, Standard Oil dominate. Cuba becomes a monoculture sugar economy. Profits flow to Wall Street, not Havana.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl2d">1960</div><div class="tl-dot" style="background:var(--red);"></div><div class="tl-content"><div class="tl-event" data-edit="tl2e">Eisenhower Embargo</div><div class="tl-desc" data-edit="tl2t">Eisenhower implements trade embargo following Castro's nationalization of U.S. properties. Cold War framing: communist threat, not sovereign rights.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl3d">1961</div><div class="tl-dot" style="background:var(--red);"></div><div class="tl-content"><div class="tl-event" data-edit="tl3e">Bay of Pigs</div><div class="tl-desc" data-edit="tl3t">CIA-trained Cuban exiles attempt invasion. Fails. Deepens Castro's hold on power and justifies the regime's framing of the U.S. as Cuba's existential enemy.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl4d">1962</div><div class="tl-dot" style="background:var(--red);"></div><div class="tl-content"><div class="tl-event" data-edit="tl4e">Kennedy Full Embargo — El Bloqueo Begins</div><div class="tl-desc" data-edit="tl4t">Kennedy tightens to near-total embargo following Cuban Missile Crisis. Now 60+ years old.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl5d">1996</div><div class="tl-dot" style="background:var(--blue);"></div><div class="tl-content"><div class="tl-event" data-edit="tl5e">Helms-Burton Act</div><div class="tl-desc" data-edit="tl5t">Codifies the embargo into law. Makes it extremely difficult for any future president to lift sanctions without an act of Congress. A legal lock on Cuba's economic strangulation.</div></div></div>
+        </div>
+      </div>
+      <div class="lens-cu" style="padding:2rem;">
+        <div class="lens-label" data-edit="s3-cu-lbl">What El Bloqueo Actually Means</div>
+        <div class="cartoon-block" data-img-src="https://www.thoughtco.com/thmb/fOCKzYNI-_YEKdP0eRlflQ2vIb0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/plattamendment-5c55ee3fc9e77c0001fd4e2e.jpg" onclick="openLB(&#39;https://www.thoughtco.com/thmb/fOCKzYNI-_YEKdP0eRlflQ2vIb0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/plattamendment-5c55ee3fc9e77c0001fd4e2e.jpg&#39;,&#39;The Platt Amendment Cartoon — c. 1901&#39;,&#39;This political cartoon illustrates the Platt Amendment forcing Cuba into submission to U.S. control. Cuba is shown as constrained — nominally independent but legally bound to allow American military intervention at will.&#39;,&#39;ThoughtCo · thoughtco.com/platt-amendment-4707877&#39;)">
+          <img src="./Images/Cartoon 4.jpg" alt="Platt Amendment cartoon" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+          <div class="cartoon-meta">
+            <div class="cartoon-title" style="color:var(--blue);" data-edit="c3t">The Platt Amendment — c.1901</div>
+            <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c3s">ThoughtCo Archive · Click to enlarge</div>
+            <div class="cartoon-analysis" style="color:#444;" data-edit="c3a">Cuba shown as legally bound — nominally independent, actually constrained. The amendment let the U.S. intervene militarily "at any time." Written into Cuba's own constitution as a condition of ending occupation.</div>
+          </div>
+        </div>
+        <div class="cartoon-block" data-img-src="https://theweek.com/u/photo/551338/cuba-sanctions-cartoon.jpg" onclick="openLB(&#39;https://theweek.com/u/photo/551338/cuba-sanctions-cartoon.jpg&#39;,&#39;Cuba Sanctions — Global Impact Cartoon, 2015&#39;,&#39;A 2015 cartoon showing the global reaction to ongoing U.S. Cuba sanctions. The world watches as the U.S. continues a Cold War-era policy that 184 out of 193 UN member nations have voted to condemn.&#39;,&#39;The Week · theweek.com/cartoons/551338&#39;)">
+          <img src="./Images/Cartoon 9.jpg" alt="Cuba sanctions global impact cartoon 2015" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+          <div class="cartoon-meta">
+            <div class="cartoon-title" style="color:var(--blue);" data-edit="c8t">Cuba Sanctions — Global Impact, 2015</div>
+            <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c8s">The Week · theweek.com · Click to enlarge</div>
+            <div class="cartoon-analysis" style="color:#444;" data-edit="c8a">184 UN nations voted to condemn U.S. Cuba sanctions in 2023. Only 2 opposed. This is not a bilateral dispute — it's a globally criticized Cold War remnant that the world has repeatedly asked the U.S. to end.</div>
+          </div>
+        </div>
+        <div class="stat-grid" style="background:rgba(0,0,0,0.05);">
+          <div class="stat-box" style="background:rgba(192,57,43,0.06);"><div class="stat-n" style="font-size:1.7rem;" data-edit="se1">$130B+</div><div class="stat-l" data-edit="se1l">Estimated economic damage from the embargo (Cuban government, reported to UN)</div></div>
+          <div class="stat-box" style="background:rgba(192,57,43,0.06);"><div class="stat-n" style="font-size:1.7rem;" data-edit="se2">184</div><div class="stat-l" data-edit="se2l">Countries that voted at the UN to condemn the U.S. embargo in 2023</div></div>
+          <div class="stat-box" style="background:rgba(192,57,43,0.06);"><div class="stat-n" style="font-size:1.7rem;" data-edit="se3">60+</div><div class="stat-l" data-edit="se3l">Years the embargo has been in force — the longest-running sanctions in modern history</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 03</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s3-notes">
+      <p><strong>The Key Argument:</strong> The U.S. liked to say the embargo was about democracy and human rights. But we had just helped overthrow a democracy in Guatemala (1954), propped up Batista's brutal dictatorship in Cuba until 1959, and supported authoritarian regimes across Latin America. This was never about democracy. It was about economic control.</p>
+      <p><strong>On the word — 'Bloqueo' vs 'Embargo':</strong> The word matters. An embargo sounds distant and bureaucratic. A blockade is military language. It evokes a siege. Cubans didn't choose that word by accident.</p>
+      <p><strong>The Hierarchy Connection:</strong> The embargo hurts ordinary Cubans most. Those with relatives in the U.S. can receive remittances. Those without — often Afro-Cubans — face the worst food and medicine shortages. The hierarchy reproduced itself through economic warfare.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 4: MODERN -->
+<div class="slide slide-interior" id="slide-4" style="display: none;">
+  <div class="slide-header">
+    <div class="slide-bg-num">04</div>
+    <div class="slide-tag" data-edit="s4-tag">Slide 04 · Modern Policy &amp; Crisis</div>
+    <h2 class="slide-h2">Maximum Pressure:<br><span data-edit="s4-h2">The 2020s Crisis</span></h2>
+  </div>
+  <div class="banner banner-red" data-edit="s4-banner">Modern Era · 2017–Present</div>
+  <div class="slide-body">
+    <div class="dual-lens">
+      <div class="lens-am" style="padding:2rem;">
+        <div class="lens-label" data-edit="s4-am-lbl">Trump-Era Maximum Pressure</div>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date" data-edit="tl6d">2016</div><div class="tl-dot" style="background:#28b450;"></div><div class="tl-content"><div class="tl-event" style="color:#28b450;" data-edit="tl6e">Obama's "Cuban Thaw"</div><div class="tl-desc" data-edit="tl6t">Embassies reopened. Travel restrictions eased. Cuba removed from State Sponsors of Terrorism list. Historic — but short-lived.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl7d">2017–2021</div><div class="tl-dot" style="background:var(--red);"></div><div class="tl-content"><div class="tl-event" data-edit="tl7e">243 New Sanctions</div><div class="tl-desc" data-edit="tl7t">Trump administration imposes 243 new sanctions. Activates Title III of Helms-Burton for the first time. Cuts remittances. Halts flights. Cuba re-added to terrorism list.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl8d">July 2021</div><div class="tl-dot" style="background:var(--gold);"></div><div class="tl-content"><div class="tl-event" data-edit="tl8e">SOS Cuba — Largest Protests in 60 Years</div><div class="tl-desc" data-edit="tl8t">Thousands cry "Libertad!" — protesting both the Cuban government AND U.S. sanctions. The San Isidro Movement leads cultural resistance.</div></div></div>
+          <div class="tl-item"><div class="tl-date" data-edit="tl9d">2022–2025</div><div class="tl-dot" style="background:var(--red);"></div><div class="tl-content"><div class="tl-event" data-edit="tl9e">Blackouts, Hunger, Mass Exodus</div><div class="tl-desc" data-edit="tl9t">Cuba's worst economic crisis since the 1990s "Special Period." Rolling blackouts 12–20 hours daily. Food shortages. Over 700,000 Cubans emigrate in 2022–2023 — the largest exodus in Cuban history.</div></div></div>
+        </div>
+      </div>
+      <div class="lens-cu" style="padding:2rem;">
+        <div class="lens-label" data-edit="s4-cu-lbl">Cuban Voices — 2021 Protests &amp; "Patria y Vida"</div>
+        <div class="cartoon-block" data-img-src="https://www.syracuse.com/resizer/v2/https%3A%2F%2Fadvancelocal-adapter-image-uploads.s3.amazonaws.com%2Fimage.syracuse.com%2Fhome%2Fdata-alfiler%2F77%2F2021%2F07%2F18%2FCuba-Protests-McFarlane.jpg?auth=fd7bff7f5b9b9dc27ceb8fefe0d0e1c5ab2a4ed282a3f1d2a5b05ae3c7d28abd&amp;width=1280" onclick="openLB(&#39;https://www.syracuse.com/resizer/v2/https%3A%2F%2Fadvancelocal-adapter-image-uploads.s3.amazonaws.com%2Fimage.syracuse.com%2Fhome%2Fdata-alfiler%2F77%2F2021%2F07%2F18%2FCuba-Protests-McFarlane.jpg?auth=fd7bff7f5b9b9dc27ceb8fefe0d0e1c5ab2a4ed282a3f1d2a5b05ae3c7d28abd&amp;width=1280&#39;,&#39;Cuba Protests Editorial Cartoon, July 2021&#39;,&#39;This editorial cartoon from July 2021 captures the SOS Cuba uprising — Cubans taking to the streets to protest both the authoritarian government and the economic conditions caused by U.S. sanctions. The protests were the largest in Cuba in over 60 years.&#39;,&#39;Syracuse.com · syracuse.com/opinion/2021/07&#39;)">
+          <img src="./Images/Cartoon 8.jpg" alt="Cuba protests cartoon 2021" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+          <div class="cartoon-meta">
+            <div class="cartoon-title" style="color:var(--blue);" data-edit="c7t">SOS Cuba Protest Cartoon — July 2021</div>
+            <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c7s">Syracuse.com Editorial · Click to enlarge</div>
+            <div class="cartoon-analysis" style="color:#444;" data-edit="c7a">Largest protests in 60 years. Cubans protested both the government AND the sanctions. Dozens were subsequently imprisoned. The people were trapped between two forces.</div>
+          </div>
+        </div>
+        <div class="cartoon-block" data-img-src="https://communistusa.org/wp-content/uploads/2021/02/Cuba-US-Blockade.jpg" onclick="openLB(&#39;https://communistusa.org/wp-content/uploads/2021/02/Cuba-US-Blockade.jpg&#39;,&#39;60 Years of the Criminal U.S. Blockade Against Cuba — Communist Party USA, 2021&#39;,&#39;This illustration from a pro-Cuba publication depicts the U.S. blockade as outright criminal — a perspective held by much of the world. While the source has a clear political viewpoint, the image represents how the embargo is viewed from within Cuba and by the Cuban diaspora: not as foreign policy, but as collective punishment of a civilian population.&#39;,&#39;Communist Party USA · communistusa.org&#39;)">
+          <img src="./Images/Cartoon 3.jpg" alt="US Cuba blockade cartoon" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+          <div class="cartoon-meta">
+            <div class="cartoon-title" style="color:var(--blue);" data-edit="c2t">60 Years of the Blockade — Cuban Perspective, 2021</div>
+            <div class="cartoon-src" style="color:rgba(28,28,28,0.4);" data-edit="c2s">Note: Pro-Cuba source. Represents how ordinary Cubans and diaspora view the embargo.</div>
+            <div class="cartoon-analysis" style="color:#444;" data-edit="c2a">To Cubans inside the island, the embargo is not foreign policy — it is collective punishment. The source has a bias, but the perspective it represents is real and widely held. Understanding it is part of empathy.</div>
+          </div>
+        </div>
+        <div class="song-block">
+          <div class="song-title" data-edit="song-t">"Patria y Vida" (Homeland and Life)</div>
+          <div class="song-artists" data-edit="song-a">Maykel Osorbo, El Funky, Gente de Zona, Yotuel, Descemer Bueno · 2021</div>
+          <div class="song-desc" data-edit="song-d">This protest anthem became the rallying cry of the July 2021 uprisings. Its title directly inverts the government's slogan "Patria o Muerte" (Homeland or Death). Recorded inside Cuba at great personal risk. Maykel Osorbo was subsequently arrested and remains imprisoned.</div>
+          <a href="https://www.youtube.com/watch?v=pP3GHvREjOY" target="_blank" class="song-link">↗ Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 04</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s4-notes">
+      <p><strong>The Trap:</strong> Cubans are trapped between two forces. The Cuban government, which is authoritarian and represses its people. And the United States, which uses economic warfare that hurts those same ordinary people — not the government leadership, who have access to their own supply chains.</p>
+      <p><strong>On "Patria y Vida":</strong> This song is a primary source. Maykel Osorbo recorded it from inside Cuba — not from Miami. He knew the risk. He was arrested and imprisoned. He's still there. That's what it means to speak truth to power in Cuba today.</p>
+      <p><strong>The Exodus:</strong> 700,000 Cubans in one year. Some ended up in Florida. Some are in New Jersey. Some are people I know personally.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 5: HIERARCHY -->
+<div class="slide slide-interior" id="slide-5" style="display: none;">
+  <div class="slide-header">
+    <div class="slide-bg-num">05</div>
+    <div class="slide-tag" data-edit="s5-tag">Slide 05 · The Mutated Hierarchy</div>
+    <h2 class="slide-h2">The Hierarchy That <em>Never Died</em>:<br><span data-edit="s5-h2">From Casta to Sanctions</span></h2>
+  </div>
+  <div class="banner banner-gold" data-edit="s5-banner">Connecting Across Time</div>
+  <div class="slide-body">
+    <p class="body-text" data-edit="s5-intro">The Spanish casta system officially ended with Cuban independence. But the structure of who has power, who suffers, who is forgotten mutated and reproduced itself through every successive era. This is the core argument of historical empathy: the past is not past.</p>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.5rem;margin:1.5rem 0;background:var(--navy-mid);padding:1.5rem;">
+      <div class="cartoon-block" style="margin:0;" data-img-src="https://www.original-political-cartoon.com/images/cuban-threat-to-usa-original-political-cartoon.jpg" onclick="openLB(&#39;https://www.original-political-cartoon.com/images/cuban-threat-to-usa-original-political-cartoon.jpg&#39;,&#39;Cuban Threat to USA — Cuban Missile Crisis Cartoon&#39;,&#39;This cartoon from the Cuban Missile Crisis period (1962) shows how the crisis was framed in the U.S.: as a Cuban threat, not as a response to U.S. aggressive policies (the Bay of Pigs invasion, multiple assassination attempts on Castro, CIA destabilization campaigns). The framing erases the context that produced the crisis.&#39;,&#39;Original Political Cartoon Gallery · original-political-cartoon.com&#39;)">
+        <img src="./Images/Cartoon 10.jpg" alt="Cuban Missile Crisis cartoon" onerror="this.style.minHeight=&#39;80px&#39;" style="min-height: 80px;">
+        <div class="cartoon-meta">
+          <div class="cartoon-title" data-edit="c9t">Cuban Missile Crisis Cartoon — 1962</div>
+          <div class="cartoon-src" data-edit="c9s">Original Political Cartoon Gallery · Click to enlarge</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;" data-edit="s5-cmc-lbl">Cuban Missile Crisis — Context Matters</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.87rem;line-height:1.85;color:rgba(246,239,225,0.8);" data-edit="s5-cmc-text">This cartoon frames Cuba as the aggressor in 1962. The context it erases: the Bay of Pigs invasion (1961), CIA assassination plots against Castro, and a decade of economic warfare that drove Cuba to seek Soviet protection. The Missile Crisis was the result of U.S. aggression as much as Soviet expansion, but American cartoons told only one side. The full Kennedy embargo was signed directly after this crisis, codifying 60+ years of collective punishment.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#ddd;margin:1.5rem 0;">
+      <div style="background:var(--navy-mid);color:var(--cream);padding:1.75rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;" data-edit="col1e">Spanish Era · Pre-1898</div>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--gold);margin-bottom:0.4rem;" data-edit="col1q1">Who held power?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col1a1">Peninsulares were born in Spain, and governed Cuba from above. Extracted wealth. Controlled law.</p>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--red);margin:0.75rem 0 0.3rem;" data-edit="col1q2">Who suffered most?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col1a2">Enslaved Africans, indigenous peoples. Their labor built the economy that enriched everyone above them.</p>
+      </div>
+      <div style="background:#1C1C1C;color:var(--cream);padding:1.75rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;" data-edit="col2e">American Imperial Era · 1898–1959</div>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--gold);margin-bottom:0.4rem;" data-edit="col2q1">Who held power?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col2a1">U.S. corporations and American-backed Cuban elites. The peninsulares were replaced by Wall Street.</p>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--red);margin:0.75rem 0 0.3rem;" data-edit="col2q2">Who suffered most?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col2a2">Afro-Cuban independence fighters excluded from victory. Jim Crow-style segregation imported from the American South. Black Cubans pushed further to the margins even after bleeding most for independence.</p>
+      </div>
+      <div style="background:#3a1a1a;color:var(--cream);padding:1.75rem;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;" data-edit="col3e">Sanction Era · 1962–Present</div>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--gold);margin-bottom:0.4rem;" data-edit="col3q1">Who holds power?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col3a1">Cuban Communist Party leadership immune to sanctions, controls state resources. In Washington: politicians who haven't updated Cuba policy in 60 years.</p>
+        <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1rem;color:var(--red);margin:0.75rem 0 0.3rem;" data-edit="col3q2">Who suffers most?</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.84rem;line-height:1.8;color:rgba(246,239,225,0.8);" data-edit="col3a2">Afro-Cubans were least likely to have family abroad sending remittances due to historical migration patterns. Worst food insecurity. Longest blackouts. Forced to flee.</p>
+      </div>
+    </div>
+    <div class="quiz-wrap">
+      <div class="quiz-q" data-edit="quiz-q">Historical Empathy Check: Which group in Cuba today is most disproportionately harmed by the combined effects of the U.S. embargo and Cuban government repression?</div>
+      <div class="quiz-opts">
+        <div class="quiz-opt" onclick="checkAnswer(this,false,&#39;Government officials have access to state resources and special import privileges that insulate them from embargo effects.&#39;)"><div class="quiz-letter">A</div><span data-edit="qa">Cuban government officials and Communist Party members</span></div>
+        <div class="quiz-opt" onclick="checkAnswer(this,false,&#39;Cuban Americans in Florida are U.S. citizens or residents and are largely outside the direct effects of sanctions on Cuba itself.&#39;)"><div class="quiz-letter">B</div><span data-edit="qb">Cuban Americans living in Florida</span></div>
+        <div class="quiz-opt" onclick="checkAnswer(this,true,&#39;Correct. Afro-Cubans are statistically least likely to have family abroad sending remittances — the primary way to access dollars in Cuba. This is a direct legacy of who was historically allowed to emigrate and who had resources. The hierarchy did not end — it updated itself.&#39;)"><div class="quiz-letter">C</div><span data-edit="qc">Afro-Cubans and those without relatives in the United States</span></div>
+        <div class="quiz-opt" onclick="checkAnswer(this,false,&#39;Cuba\&#39;s tourism industry involves some insulation from sanction effects for those employed within it.&#39;)"><div class="quiz-letter">D</div><span data-edit="qd">Workers in Cuba's tourism industry</span></div>
+      </div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 05</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s5-notes">
+      <p><strong>Core Argument:</strong> This slide is the conceptual heart of the project. The same hierarchy — who suffers, who escapes, who has power — reproduced itself across 125 years, just wearing different clothes.</p>
+      <p><strong>On the Interactive Quiz:</strong> Sanctions don't hurt governments — governments find workarounds. Sanctions hurt civilians. And within those civilians, historical patterns of inequality determine who suffers worst.</p>
+      <p><strong>Historical Empathy Call:</strong> To understand Cuba today, you cannot just look at the news. You have to follow the hierarchy all the way back to the 17th century. The roots of modern Cuban suffering are 400 years deep.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 6: PERSONAL STORY -->
+<div class="slide" id="slide-6">
+  <div class="story-bg">
+    <div class="story-inner">
+      <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;text-align:center;" data-edit="s6-tag">Slide 06 · From Havana to New Jersey — Humanizing the Sanctions</div>
+      <h2 style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:0.05em;text-align:center;color:var(--white);line-height:1;margin-bottom:0.4rem;">
+        From <span style="color:var(--gold);">Havana</span><br>to <span style="color:var(--red-light);" data-edit="s6-city">Ridgefield, New Jersey</span>
+      </h2>
+      <div class="cover-rule"></div>
+      <div class="story-pullquote" data-edit="s6-pq">"Seeing my experience with my Cuban friends and their families truly shaped how I think about the U.S.'s actions on victims of sanctions."</div>
+      <div class="disp-map">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(246,239,225,0.4);margin-bottom:1rem;" data-edit="s6-map-lbl">Anthony's Family Path</div>
+        <div class="disp-route">
+          <div class="route-node"><div class="route-city" data-edit="r1c">Havana</div><div class="route-country" data-edit="r1k">Cuba · Origin</div></div>
+          <div class="route-arrow">→</div>
+          <div class="route-node"><div class="route-city" style="color:var(--red);" data-edit="r2c">The Choice</div><div class="route-country" data-edit="r2k">Embargo Pressure</div></div>
+          <div class="route-arrow">→</div>
+          <div class="route-node"><div class="route-city" data-edit="r3c">Hialeah / Miami</div><div class="route-country" data-edit="r3k">Florida · Diaspora</div></div>
+          <div class="route-arrow">→</div>
+          <div class="route-node"><div class="route-city" style="color:#88aaff;" data-edit="r4c">Ridgefield, NJ</div><div class="route-country" data-edit="r4k">New Jersey · New Community</div></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0;">
+        <div>
+          <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem;" data-edit="s6-fl">Anthony's Story</div>
+          <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.92rem;line-height:1.9;color:rgba(246,239,225,0.85);" data-edit="s6-fp1">My friend Anthony, who I met here in New Jersey in 4th grade, was part of a Cuban family that made it to the U.S. after years of navigating the wreckage of the Cuban economy. I didn't fully understand what his family had left behind until I learned: his family in Havana was dealing with blackouts that lasted 16 hours a day. There was no reliable access to medicine. Cooking oil, a basic staple, was rationed.</p>
+          <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.92rem;line-height:1.9;color:rgba(246,239,225,0.85);margin-top:1rem;" data-edit="s6-fp2">In 8th grade, Anthony had to move back to Florida to help support his family financially. Not because he wanted to leave. Because survival required it. That is what sanctions feel like from the inside. It is not a foreign policy debate, but a kid changing schools so his family can pay for food.</p>
+        </div>
+        <div>
+          <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem;" data-edit="s6-el">What This Means for Empathy</div>
+          <div class="primary-source" style="border-color:var(--gold);background:rgba(212,160,23,0.08);">
+            <span data-edit="s6-ed">"Historical empathy is the process of understanding people in the past by contextualizing their actions."</span>
+            <cite style="color:var(--gold);" data-edit="s6-ec">— Course definition, Developing Empathy in American History (Mr. Conry, 2026)</cite>
+          </div>
+          <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.92rem;line-height:1.9;color:rgba(246,239,225,0.85);margin-top:1rem;" data-edit="s6-ep">Anthony isn't a historical figure. He's a teenager. But his story is made possible only by history. By the Platt Amendment, by the embargo, and by decisions made in Washington D.C. decades before he was born. Historical empathy isn't just about the past. It's about seeing the people around you and understanding the forces that shaped their lives.</p>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(212,160,23,0.25);padding:1.75rem;margin:1.5rem 0;">
+        <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem;" data-edit="s6-wl">Why I Selected This Topic</div>
+        <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.92rem;line-height:1.9;color:rgba(246,239,225,0.85);" data-edit="s6-wp">I am not Cuban. I did not experience the embargo. But I grew up alongside friends like Anthony whose families did. I have seen what it means to leave a country with nothing. It is something that happens not because you want to, but because the political and economic forces around you have made staying impossible. I chose this topic because the narrative around Cuba is often polarized by Cold War rhetoric that erases the actual human beings in the middle. I want my classmates to see those people. In my opinion: the embargo should be substantially reformed to allow free trade in food, medical supplies, and humanitarian goods. Economic strangulation has not produced democracy in Cuba. It has produced suffering among ordinary Cubans while strengthening the government's narrative that America is the enemy.</p>
+      </div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 06</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s6-notes">
+      <p><strong>Personal + Historical:</strong> This is the slide where I step out from behind the historical sources and speak directly. I am not Cuban. But I grew up next to this history. Empathy doesn't require you to have experienced something — it requires you to listen to those who have.</p>
+      <p><strong>On Anthony:</strong> When Anthony had to move in 8th grade, I didn't fully understand why. I just knew he was gone. It took years of learning to connect what I was studying in history books to what was happening in my own neighborhood.</p>
+      <p><strong>On your opinion:</strong> I believe the embargo should be reformed — not because I support the Cuban government, but because 60 years of evidence shows the embargo hasn't changed the Cuban government's behavior. It has only made the lives of ordinary Cubans harder.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 7: CALL TO ACTION -->
+<div class="slide slide-interior" id="slide-7">
+  <div class="slide-header">
+    <div class="slide-bg-num">07</div>
+    <div class="slide-tag" data-edit="s7-tag">Slide 07 · Cultivating Historical Empathy</div>
+    <h2 class="slide-h2">Cultivating <em>Historical Empathy</em>:<br><span data-edit="s7-h2">A Call to Action</span></h2>
+  </div>
+  <div class="banner banner-gold" data-edit="s7-banner">Now What?</div>
+  <div class="slide-body">
+    <p class="body-text" data-edit="s7-intro">Historical empathy is not passive. It requires active choices. Here is what you can do not as a future politician, not as a foreign policy expert, but as a person who now knows more than you did an hour ago.</p>
+    <div class="cta-grid">
+      <div class="cta-card"><div class="cta-icon">📖</div><div class="cta-title" data-edit="cta1t">Read Primary Sources</div><div class="cta-desc" data-edit="cta1d">Seek out the voices of Cubans themselves. Start with "Patria y Vida." Read Máximo Gómez's diary. The voices are there; they're just not in most textbooks.</div></div>
+      <div class="cta-card red"><div class="cta-icon">🗣</div><div class="cta-title" data-edit="cta2t">Ask Before You Assume</div><div class="cta-desc" data-edit="cta2d">If you know someone from Cuba, ask about their experience. Not "what do you think of your government?" but "what was your daily life like? What did you leave behind?"</div></div>
+      <div class="cta-card blue"><div class="cta-icon">🔍</div><div class="cta-title" data-edit="cta3t">Question the Framing</div><div class="cta-desc" data-edit="cta3d">When you hear "sanctions" or "embargo," ask: who is this actually hurting? When you see a cartoon about Cuba, ask: whose perspective is missing from the frame?</div></div>
+      <div class="cta-card"><div class="cta-icon">🌐</div><div class="cta-title" data-edit="cta4t">Follow WOLA and HRW</div><div class="cta-desc" data-edit="cta4d">Washington Office on Latin America (WOLA) publishes accessible Cuba policy analyses. Human Rights Watch documents both Cuban government abuses AND the humanitarian effects of sanctions. Both truths matter.</div></div>
+      <div class="cta-card red"><div class="cta-icon">🗣</div><div class="cta-title" data-edit="cta5t">Connect to Civic Action</div><div class="cta-desc" data-edit="cta5d">Cuba policy is made by elected officials. Understanding the human cost of these decisions is the first step toward holding representatives accountable for consequences, not just intentions.</div></div>
+      <div class="cta-card blue"><div class="cta-icon">🤝</div><div class="cta-title" data-edit="cta6t">Practice Cross-Cultural Empathy Now</div><div class="cta-desc" data-edit="cta6d">Your classmates carry histories. Some were shaped by decisions the U.S. government made before any of you were born. Historical empathy starts with that recognition.</div></div>
+    </div>
+    <div style="margin-top:2.5rem;">
+      <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;border-bottom:2px solid rgba(192,57,43,0.18);padding-bottom:0.5rem;" data-edit="nj-lbl">If You Live in New Jersey — Ways to Make Change</div>
+      <p style="font-family:&#39;Crimson Pro&#39;,serif;font-size:0.9rem;line-height:1.85;color:#3a3a3a;margin-bottom:1.4rem;" data-edit="nj-intro">New Jersey has one of the largest Cuban-American and Latin American communities on the East Coast. Ridgefield, Weehawken, Union City, and North Bergen have deep Cuban and Cuban-American roots. Local action here carries real weight.</p>
+      <div class="nj-grid">
+        <div class="nj-card"><div class="nj-icon">🏛</div><div class="nj-title" data-edit="nj1t">Write to Your U.S. Representatives</div><div class="nj-desc" data-edit="nj1d">New Jersey's U.S. Senators and Representatives vote on legislation that affects Cuba policy. A constituent letter — especially from a student — gets read. Ask them where they stand on allowing humanitarian trade with Cuba: food, medicine, medical equipment.</div><a href="https://www.congress.gov/members/find-your-member" target="_blank" class="nj-link">Find your NJ rep → congress.gov</a></div>
+        <div class="nj-card gold"><div class="nj-icon">🎓</div><div class="nj-title" data-edit="nj2t">Bring This to Your School</div><div class="nj-desc" data-edit="nj2d">Propose a panel, documentary screening, or cultural event at your school. Organizations like WOLA offer free educational materials. A conversation in a New Jersey classroom about the human cost of Cuba sanctions is a form of civic action.</div><a href="https://www.wola.org/cuba/" target="_blank" class="nj-link">WOLA Cuba resources → wola.org/cuba</a></div>
+        <div class="nj-card blue"><div class="nj-icon">📰</div><div class="nj-title" data-edit="nj3t">Write an Op-Ed or Letter to the Editor</div><div class="nj-desc" data-edit="nj3d">The Jersey Journal, NJ.com, and local Bergen County papers publish letters from readers. Personal testimony from a New Jersey student carries more weight than another think-tank analysis.</div><a href="https://www.nj.com/letters/" target="_blank" class="nj-link">NJ.com Letters → nj.com/letters</a></div>
+        <div class="nj-card"><div class="nj-icon">🇺</div><div class="nj-title" data-edit="nj4t">Connect with the Cuban Community in NJ</div><div class="nj-desc" data-edit="nj4d">Union City, 3 miles from Ridgefield, is sometimes called "Havana on the Hudson." It has one of the densest Cuban-American populations in the U.S. outside Miami. Cuban cultural organizations there hold events and share resources for recent arrivals.</div><a href="https://unioncitynj.org/" target="_blank" class="nj-link">Union City NJ → unioncitynj.org</a></div>
+        <div class="nj-card gold"><div class="nj-icon">📱</div><div class="nj-title" data-edit="nj5t">Amplify Cuban Voices Online</div><div class="nj-desc" data-edit="nj5d">Share the work of artists like the San Isidro Movement. Share journalism from outlets covering Cuba from the inside — 14ymedio (founded by Yoani Sánchez), CiberCuba, and El Toque. Amplification is political action — it breaks the information blockade that isolates Cuban voices.</div><a href="https://www.14ymedio.com/en/" target="_blank" class="nj-link">14ymedio English → 14ymedio.com/en</a></div>
+        <div class="nj-card blue"><div class="nj-icon">💰</div><div class="nj-title" data-edit="nj6t">Support Organizations Directly Helping Cubans</div><div class="nj-desc" data-edit="nj6d">Cuba Archive documents human rights abuses. CubaNow advocates for policy reform that helps ordinary Cubans. Puentes de Amor supports people-to-people connection. Even $10 sent to a humanitarian organization matters more than another geopolitical debate.</div><a href="https://cubanow.org/" target="_blank" class="nj-link">CubaNow → cubanow.org</a></div>
+      </div>
+    </div>
+    <div style="background:var(--navy-mid);padding:2rem;margin:1.5rem 0;text-align:center;">
+      <div style="font-family:&#39;DM Serif Display&#39;,serif;font-size:1.3rem;font-style:italic;color:var(--gold);margin-bottom:0.65rem;line-height:1.5;" data-edit="s7-closing">"Cubans are not geopolitical chess pieces.<br>They are human beings trapped between two unyielding political forces."</div>
+      <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(246,239,225,0.35);" data-edit="s7-sub">— Core thesis of this presentation</div>
+    </div>
+  </div>
+  <div class="speaker-notes">
+    <div class="notes-toggle" onclick="toggleNotes(this)">Speaker Notes — Slide 07</div>
+    <div class="notes-content"><div class="notes-text" data-edit="s7-notes">
+      <p><strong>Closing energy:</strong> We started 125 years ago with a stolen revolution. We ended moments ago with Anthony having to leave New Jersey in 8th grade so his family could survive. That line — from 1898 to right now — is what historical empathy reveals.</p>
+      <p><strong>On the NJ section:</strong> Union City, 3 miles away, is one of the densest Cuban communities in America outside Miami. This isn't a foreign issue. It's a neighborhood issue. The history is not over there — it's right here.</p>
+      <p><strong>Final ask:</strong> I'm not asking you to have a specific political position on Cuba. I'm asking you to see Cubans as people, not as props in a Cold War argument.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SLIDE 8: WORKS CITED -->
+<div class="slide slide-interior" id="slide-8">
+  <div class="slide-header">
+    <div class="slide-bg-num">08</div>
+    <div class="slide-tag" data-edit="s8-tag">Slide 08 · Works Cited</div>
+    <h2 class="slide-h2">Sources &amp; <em>Citations</em></h2>
+  </div>
+  <div class="banner banner-gold">Works Cited · MLA Format</div>
+  <div class="works-cited">
+    <p style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-bottom:2rem;" data-edit="s8-note">Primary sources marked in red, secondary in blue.</p>
+    <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.9rem;border-bottom:1px solid rgba(192,57,43,0.18);padding-bottom:0.5rem;">Primary Sources</div>
+    <div class="source-item"><div class="source-num">1</div><div class="source-text"><strong>United States Congress.</strong> <span class="badge badge-p">Primary</span> <em>The Platt Amendment.</em> 1901. United States Statutes at Large, Vol. 31, ch. 803, pp. 897–898. Available at: <a href="https://sourcebooks.fordham.edu/mod/1901platt.asp" target="_blank">sourcebooks.fordham.edu</a></div></div>
+    <div class="source-item"><div class="source-num">2</div><div class="source-text"><strong>Gómez, Máximo.</strong> <span class="badge badge-p">Primary</span> <em>Diario de Campaña del Mayor General Máximo Gómez, 1868–1899.</em> La Habana: Instituto del Libro, 1968. Digitized edition available at: <a href="https://www.cervantesvirtual.com/obra/diario-de-campana-del-mayor-general-maximo-gomez/" target="_blank">cervantesvirtual.com</a></div></div>
+    <div class="source-item"><div class="source-num">3</div><div class="source-text"><strong>Osorbo, Maykel, El Funky, Gente de Zona, Yotuel, and Descemer Bueno.</strong> <span class="badge badge-p">Primary</span> "Patria y Vida." 2021. <a href="https://www.youtube.com/watch?v=pP3GHvREjOY" target="_blank">youtube.com</a></div></div>
+    <div class="source-item"><div class="source-num">4</div><div class="source-text"><strong>Beveridge, Albert J.</strong> <span class="badge badge-p">Primary</span> Speech before the U.S. Senate, January 9, 1900. Congressional Record, 56th Congress, 1st Session, pp. 704–712. Note: speech addressed U.S. imperial policy in the Philippines and broader Caribbean theater, including Cuba, following the Spanish-American War. Full text: <a href="https://teachingamericanhistory.org/document/in-support-of-an-american-empire/" target="_blank">teachingamericanhistory.org</a></div></div>
+    <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin:2rem 0 0.9rem;border-bottom:1px solid rgba(26,58,107,0.18);padding-bottom:0.5rem;">Secondary Sources</div>
+    <div class="source-item"><div class="source-num">5</div><div class="source-text"><strong>National Security Archive, George Washington University.</strong> <span class="badge badge-s">Secondary</span> "Cuba Embargoed: U.S. Trade Sanctions Turn Sixty." 2022. <a href="https://nsarchive.gwu.edu/briefing-book/cuba/2022-02-02/cuba-embargoed-us-trade-sanctions-turn-sixty" target="_blank">nsarchive.gwu.edu</a></div></div>
+    <div class="source-item"><div class="source-num">6</div><div class="source-text"><strong>Council on Foreign Relations.</strong> <span class="badge badge-s">Secondary</span> "U.S.-Cuba Relations." Updated February 2026. <a href="https://www.cfr.org/backgrounders/us-cuba-relations" target="_blank">cfr.org</a></div></div>
+    <div class="source-item"><div class="source-num">7</div><div class="source-text"><strong>Washington Office on Latin America (WOLA).</strong> <span class="badge badge-s">Secondary</span> "Understanding the Failure of the U.S. Cuba Embargo." 2022. <a href="https://www.wola.org/analysis/understanding-failure-of-us-cuba-embargo/" target="_blank">wola.org</a></div></div>
+    <div class="source-item"><div class="source-num">8</div><div class="source-text"><strong>Pérez, Louis A.</strong> <span class="badge badge-s">Secondary</span> <em>Cuba: Between Reform and Revolution.</em> Oxford University Press. (Latin American Histories series.)</div></div>
+    <div class="source-item"><div class="source-num">9</div><div class="source-text"><strong>LeoGrande, William M.</strong> <span class="badge badge-s">Secondary</span> "A Policy Long Past Its Expiration Date: U.S. Economic Sanctions Against Cuba." <em>Social Research: An International Quarterly</em> 82, no. 4 (2015): 939–966.</div></div>
+    <div class="source-item"><div class="source-num">10</div><div class="source-text"><strong>Human Rights Watch.</strong> <span class="badge badge-s">Secondary</span> "Cuba World Report 2024." <a href="https://www.hrw.org/world-report/2024/country-chapters/cuba" target="_blank">hrw.org</a></div></div>
+    <div style="font-family:&#39;Space Mono&#39;,monospace;font-size:8.5px;letter-spacing:0.2em;text-transform:uppercase;color:#888;margin:2rem 0 0.9rem;border-bottom:1px solid rgba(0,0,0,0.1);padding-bottom:0.5rem;">Political Cartoon Sources</div>
+    <div class="source-item"><div class="source-num">11</div><div class="source-text"><strong>Dalrymple, Louis.</strong> <span class="badge badge-p">Primary Visual</span> "School Begins." <em>Puck,</em> Jan. 25, 1899. Library of Congress. <a href="https://www.loc.gov/item/2012647459/" target="_blank">loc.gov</a></div></div>
+    <div class="source-item"><div class="source-num">12</div><div class="source-text"><strong>Gillam, Bernhard.</strong> <span class="badge badge-p">Primary Visual</span> "Trouble in Cuba." 1895. Geographicus Rare Antique Maps. <a href="https://www.geographicus.com/P/AntiqueMap/troubleincuba-gillam-1895" target="_blank">geographicus.com</a></div></div>
+    <div class="source-item"><div class="source-num">13</div><div class="source-text"><span class="badge badge-p">Primary Visual</span> "La Fatlera del Oncle Sam." c.1898. College of Wooster Latin America Archive. <a href="https://cowlatinamerica.voices.wooster.edu/archive-item/la-fatlera-del-oncle-sam/" target="_blank">cowlatinamerica.voices.wooster.edu</a></div></div>
+    <div class="source-item"><div class="source-num">14</div><div class="source-text"><span class="badge badge-p">Primary Visual</span> Platt Amendment political cartoon, c. 1902. Library of Congress. <a href="https://www.loc.gov/item/2013651824" target="_blank">loc.gov</a></div></div>
+    <div class="source-item"><div class="source-num">15</div><div class="source-text"><span class="badge badge-s">Secondary Visual</span> Cuba Libre Editorial Cartoon. Pat Bagley, Cagle Cartoons, 2021. <a href="https://www.cagle.com/pat-bagley/2021/07/cuba-libre" target="_blank">cagle.com</a></div></div>
+    <div class="source-item"><div class="source-num">16</div><div class="source-text"><span class="badge badge-s">Secondary Visual</span> Cuba Embargo Cartoon. <em>The Week,</em> 2015. <a href="https://theweek.com/cartoons/551338/political-cartoon-cuba-sanctions-world" target="_blank">theweek.com</a></div></div>
+    <div class="source-item"><div class="source-num">17</div><div class="source-text"><span class="badge badge-s">Secondary Visual</span> Cuba Protests Editorial Cartoon. July 2021. Cagle Cartoons. <a href="https://www.cagle.com/topic/cuban" target="_blank">cagle.com</a></div></div>
+    <div class="source-item"><div class="source-num">18</div><div class="source-text"><span class="badge badge-s">Secondary Visual</span> Cuban Missile Crisis cartoon. Original Political Cartoon Gallery. <a href="https://www.original-political-cartoon.com/cartoon-gallery/buy/cuban-threat-to-usa/3526/" target="_blank">original-political-cartoon.com</a></div></div>
+    <div class="source-item"><div class="source-num">19</div><div class="source-text"><strong>History Is Now Magazine.</strong> <span class="badge badge-s">Secondary</span> "The Humanitarian Dimension of the 1898 American Occupation of Cuba." 2024. <a href="https://www.historyisnowmagazine.com/blog/2024/4/3/the-humanitarian-dimension-of-the-1898-american-occupation-of-cuba" target="_blank">historyisnowmagazine.com</a></div></div>
+    <div class="source-item"><div class="source-num">20</div><div class="source-text"><strong>Communist Party USA.</strong> <span class="badge badge-p">Primary (Ideological)</span> "60 Years of the Criminal U.S. Imperialist Blockade Against Cuba." 2021. <em>Note: included as a primary document of how the Cuban left frames the embargo — not as a neutral secondary source.</em> <a href="https://communistusa.org/60-years-of-the-criminal-us-imperialist-blockade-against-the-cuban-revolution/" target="_blank">communistusa.org</a></div></div>
+    <div style="margin-top:2rem;padding:1rem 1.25rem;background:rgba(192,57,43,0.05);border-left:3px solid var(--red);font-family:&#39;Crimson Pro&#39;,serif;font-size:0.85rem;line-height:1.75;color:#555;" data-edit="s8-footer"><strong style="color:var(--red);">Note on Source Selection:</strong> This project includes American and Cuban perspectives, primary documents from 1898 and the present, and voices from multiple political contexts, including artists imprisoned by the Cuban government, scholars critical of the U.S. embargo, and UN bodies. The goal is not a single narrative but showing the human complexity that single narratives erase.</div>
+  </div>
+</div>
+
+<!-- SLIDE NAV -->
+<div id="slideNav" style="display: block;">
+  <div class="slide-nav">
+    <button id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+    <span class="slide-count" id="slideCount">Slide 4 of 9</span>
+    <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+  </div>
+</div>
+
+<script>
+const TOTAL=9,IDS=['slide-0','slide-1','slide-2','slide-3','slide-4','slide-5','slide-6','slide-7','slide-8'],LBLS=['Cover','01: Origins','02: Dual Lens','03: Economy','04: Modern','05: Hierarchy','06: Personal','07: Action','08: Sources'];
+let cur=0;
+function buildNav(){const p=document.getElementById('navPills');IDS.forEach((id,i)=>{const b=document.createElement('button');b.className='nav-pill'+(i===0?' active':'');b.textContent=i===0?'Cover':'0'+i;b.title=LBLS[i];b.onclick=()=>goTo(i);p.appendChild(b);});}
+function goTo(idx){const prev=document.getElementById(IDS[cur]);if(prev){prev.style.display='none';prev.classList.remove('active');}cur=idx;const next=document.getElementById(IDS[cur]);if(next){next.style.display=(cur===0)?'flex':'block';next.classList.add('active');}document.querySelectorAll('.nav-pill').forEach((p,i)=>p.classList.toggle('active',i===cur));document.getElementById('prevBtn').disabled=cur===0;document.getElementById('nextBtn').disabled=cur===TOTAL-1;document.getElementById('slideCount').textContent='Slide '+(cur+1)+' of '+TOTAL;document.getElementById('progressBar').style.width=((cur/(TOTAL-1))*100)+'%';document.getElementById('slideNav').style.display='block';window.scrollTo({top:0,behavior:'smooth'});}
+function changeSlide(d){goTo(Math.max(0,Math.min(TOTAL-1,cur+d)));}
+function toggleNotes(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open');}
+function checkAnswer(el,correct,explanation){el.parentElement.querySelectorAll('.quiz-opt').forEach(o=>o.style.pointerEvents='none');el.classList.add(correct?'correct':'wrong');const fb=document.getElementById('quiz-feedback');fb.textContent=explanation;fb.className='quiz-feedback show '+(correct?'good':'bad');}
+function openLB(src,cap,analysis,source){document.getElementById('lb-img').src=src;document.getElementById('lb-caption').innerHTML=cap;document.getElementById('lb-analysis').innerHTML=analysis;document.getElementById('lb-src').innerHTML='Source: '+source;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
+function closeLightbox(e){if(!e||e.target===document.getElementById('lightbox')||e.target.tagName==='BUTTON'){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox({target:document.getElementById('lightbox')});if(!document.body.classList.contains('editing')){if(e.key==='ArrowRight'||e.key===' ')changeSlide(1);if(e.key==='ArrowLeft')changeSlide(-1);}});
+buildNav();goTo(0);
+</script>
+
+
+</body></html>
